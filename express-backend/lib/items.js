@@ -2,10 +2,6 @@ const itemModule = require('../modules/items')
 
 class Items {
     constructor() {
-        this.items = [
-            {id: 1, name: 'paper towel', price: 'you clean things with it'},
-        ];
-        this.nextId = 2;
     }
 
     index(itemsPerPage,offset) {
@@ -32,7 +28,6 @@ class Items {
     }
 
     async update(id, name, price) {
-        
         await itemModule.findByIdAndUpdate(id ,{ name:name , price:price })
     }
 

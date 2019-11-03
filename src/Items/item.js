@@ -13,12 +13,15 @@ const Item = props =>{
 
     return (
         <Card style={styles.item}>
+        <View>
             <SecondaryText style={styles.itemText}>Name: {props.name} Price: {props.price}</SecondaryText>
-            <Image source={{ uri: imgUrl }} style={{ width: 200, height: 200 }} />
-            <EditItem id={props.id} name={props.name} price={props.price} editFunc={props.editFunc}/>
-            <TouchableOpacity onPress={()=>props.delFunc(props.id)} activeOpacity={0.8}>
-            <DeleteItem id = {props.id} delFunc={props.delFunc}/>
-            </TouchableOpacity>
+                <EditItem id={props.id} name={props.name} price={props.price} editFunc={props.editFunc}/>
+                <TouchableOpacity onPress={()=>props.delFunc(props.id)} activeOpacity={0.8}>
+                <DeleteItem id = {props.id} delFunc={props.delFunc}/>
+                </TouchableOpacity>
+            </View>
+           <Image source={{ uri: imgUrl }} style={{ width: 100, height: 100 }} />
+
         </Card>
       
     );

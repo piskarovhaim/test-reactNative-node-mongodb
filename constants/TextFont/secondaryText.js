@@ -7,8 +7,9 @@ const SecondaryText = props =>{
 
 const style = StyleSheet.create({
     text:{
-        fontFamily:'open-sans',
-        fontSize:40
+        //fontFamily:'open-sans',
+        fontSize: 20,
+        color:'white',
     }
 })
 

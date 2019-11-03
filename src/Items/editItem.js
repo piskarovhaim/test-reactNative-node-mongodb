@@ -6,7 +6,7 @@ const EditItem = props =>{
 
     const [onEdit , setOnEdit] = useState(false);
     const [name,setName] = useState(props.name);
-    const [price, setPrice] = useState(props.price);
+    const [price, setPrice] = useState(props.price.toString());
 
     const handleSave = () => {
         setOnEdit(false);
@@ -24,6 +24,7 @@ const EditItem = props =>{
                 value={name}
                 />
                 <TextInput
+                type
                 style={styles.textInput}
                 onChangeText={value => setPrice(value)}
                 value={price}

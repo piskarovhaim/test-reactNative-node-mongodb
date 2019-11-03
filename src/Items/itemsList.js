@@ -114,7 +114,7 @@ handleEditItem(id,name,price){
 //<AddItem addFunc={this.handleAddItem}/>
 //
   render(){
-   // console.log(this.state);
+   //console.log(this.state.items);
     return(
       <SafeAreaView style={styles.container}>
         <Button title="add new item" onPress={()=>this.setState({addMode:true})}/>

@@ -17,7 +17,7 @@ router.get('/', async function(req, res) {
 
     const totalRecords = await itemModule.estimatedDocumentCount();
 
-    const itemsPerPage = Number(req.query.limit) || 3;
+    const itemsPerPage = Number(req.query.limit) || 6;
     const page = Number(req.query.page) || 1;
 
     const totalPages = totalRecords / itemsPerPage;
